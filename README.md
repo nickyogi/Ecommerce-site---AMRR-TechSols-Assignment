@@ -7,7 +7,7 @@ A feature-rich, fully responsive **eCommerce web application** built with **Reac
 <img src="/PreviewImages/ProjectPreview-1.PNG" alt="eCommerce Website Preview">
 <img src="/PreviewImages/ProjectPreview-2.PNG" alt="eCommerce Website Preview"></p>
 <h2 id="demo">Demo</h2>
-<p>Explore the live demo of website : <a href="https://ecommerce-site-amrr-tech-sols-assig.vercel.app/view-items">Live Demo</a></p>
+<p>Explore the live demo of website : <a href="https://ecommerce-site-amrr-tech-sols-assig.vercel.app/">Live Demo</a></p>
 ---
 
 ## 🔥 Key Features
