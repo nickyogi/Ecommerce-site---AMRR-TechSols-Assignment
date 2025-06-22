@@ -27,12 +27,12 @@ function Nav() {
         nav ? "h-auto" : ""
       } md:h-screen transition-all duration-500 flex flex-col items-center bg-zinc-100 pt-5`}
     >
-      <a
+      <Link
         className="border border-blue-200 rounded px-16 py-2 md:mb-0 text-blue-300  hover:text-zinc-100 hover:bg-blue-300 duration-300"
-        href="/additem"
+        to="/add-items"
       >
         Add Item
-      </a>
+      </Link>
 
       <div
         className={`
