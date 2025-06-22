@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ProductContext } from "../utils/Context";
 import Carousel from "./Carousel";
+import Loader from "./Loader";
 
 function ProductDetails() {
   const [product, setProduct] = useContext(ProductContext);
@@ -13,6 +14,7 @@ function ProductDetails() {
   const [singleProduct, setSingleProduct] = useState(null);
 
   const [imageIndex, setImageIndex] = useState(null);
+
 
   const navigate = useNavigate();
 
@@ -29,6 +31,7 @@ function ProductDetails() {
       setSingleProduct(
         JSON.parse(localStorage.getItem("product")).filter((p) => p.id == id)[0]
       );
+      
     }
   }, []);
 
@@ -179,9 +182,7 @@ function ProductDetails() {
       
     </div>
   ) : (
-    <h1 className="text-4xl font-semibold mx-auto relative mt-[20%]">
-      Loading...
-    </h1>
+    <Loader />
   );
 }
 

@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ProductContext } from "../utils/Context";
 import { useContext } from "react";
 import { useEffect } from "react";
+import Loader from "./Loader";
 // import axios from '../utils/axios'
 
 function Home() {
@@ -37,7 +38,7 @@ function Home() {
   }, [category, product]);
 
   return (
-    <div className="md:flex overflow-hidden pb-10">
+    <div className="md:flex w-full overflow-hidden pb-10">
       <Nav />
 
 
@@ -62,11 +63,7 @@ function Home() {
             </Link>
           ))
         ) : (
-          <div className="w-full h-full flex justify-center items-center">
-            <div className="text-gray-500 text-lg animate-pulse">
-              Loading products...
-            </div>
-          </div>
+          <Loader />
         )}
       </div>
     </div>
