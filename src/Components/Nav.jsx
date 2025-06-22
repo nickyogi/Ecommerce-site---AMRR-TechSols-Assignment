@@ -5,8 +5,7 @@ import { ProductContext } from "../utils/Context";
 function Nav() {
   const [product] = useContext(ProductContext);
 
-  const [nav, setNav] = useState(false)
-  
+  const [nav, setNav] = useState(false);
 
   let distnt_category =
     product && product.reduce((acc, curr) => [...acc, curr.category], []);
@@ -30,7 +29,7 @@ function Nav() {
     >
       <a
         className="border border-blue-200 rounded px-16 py-2 md:mb-0 text-blue-300  hover:text-zinc-100 hover:bg-blue-300 duration-300"
-        href="/add-item"
+        href="/additem"
       >
         Add Item
       </a>
@@ -39,7 +38,9 @@ function Nav() {
         className={`
     w-full px-5 overflow-hidden transition-all duration-500 md:block  md:h-full md:opacity-100
     ${
-      nav ? "max-h-[500px] opacity-100 scale-100" : "max-h-0 md:max-h-full opacity-0 md:opacity-100 scale-95 md:scale-100"
+      nav
+        ? "max-h-[500px] opacity-100 scale-100"
+        : "max-h-0 md:max-h-full opacity-0 md:opacity-100 scale-95 md:scale-100"
     }
   `}
       >
